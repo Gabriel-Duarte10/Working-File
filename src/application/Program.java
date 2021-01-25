@@ -17,20 +17,20 @@ public class Program {
 		
 		System.out.print("Digite o caminho e o nome do arquivo a ser criado: ");
 		String path = sc.nextLine();
+		//C:\\Users\\Gabri\\Desktop\\teste\\teste.txt
 		
 		System.out.print("Quantos produtos deseja cadastrar: ");
 		int n = sc.nextInt();
 		
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path)))  {
 			
+			sc.nextLine();
 			for(int i=1;i<=n;i++) {
 				
 				System.out.print("Digite o Produto, o Preco e a Quantidade: ");
-				sc.nextLine();
 				String lines = sc.nextLine();
 				bw.write(lines);
-				bw.newLine();
-				
+				bw.newLine();	
 			}
 		}
 		catch(IOException e){
